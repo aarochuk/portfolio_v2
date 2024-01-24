@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body{
+    background-color: #141c2f;
+    font-family: 'Space Mono', monospace;
+    color: white;
+}
+
+.header, .header-name, .header-socials{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    justify-content: space-between;
+}
+
+.header-socials{
+    justify-content: space-between;
+    gap: 1.5em;
+    margin-inline-end: 2em;
+}
+
+.header-name{
+    margin-inline-start: 2em;
+}
+
+.header-name > p{
+    font-weight: 700;
+    font-size: 1.5em;
+}
