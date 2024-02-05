@@ -8,7 +8,7 @@
         <title>Andrew Arochukwu</title>
     </head>
     <body>
-        <div class="header">
+        <div id="head" class="header">
             <div class="header-name">
                 <p>andrew a.</p>
             </div>
@@ -38,32 +38,60 @@
             </div>
         </div>
         <div class="experience" id="exp">
-            <h1>experience</h1>
-            <div>
-                <div>
-                    <h1>Ciena - Embedded Software Developer Coop</h1>
-                    <h2>January 2024 - April 2024</h2>
-                    <p> TBA </p>
+            <div class="experience-top">
+                <h1>experience</h1>
+                <a href="#head">
+                    <img src="arrow-up.png" onmouseover="singleArrowHover(this);" onmouseout="singleArrowUnhover(this);">
+                </a>
+            </div>
+            <div class="job-holder">
+                <div class="job">
+                    <h1 class="job-title">Ciena - Embedded Software Developer Coop</h1>
+                    <h2 class="job-date">January 2024 - April 2024</h2>
+                    <p class="job-desc"> TBA </p>
                 </div>
-                <div>
-                    <h1>Ericsson - Software Developer Coop</h1>
-                    <h2>May 2023 - August 2023</h2>
-                    <p>As a software developer coop, I was responsible for collaborating with our development team to deliver high-quality software solutions, that would increase the efficiency of team operations, and also test software solutions made to ensure they were bug-free and client-ready when released. During this coop, I worked on making tools to increase efficiency in reporting on testing results. In addition, I created a testing framework to test an application that collected the data on the testing devices used by the team. Furthermore, I served as scrum master during multiple scrums hosting scrum meetings and gaining experience in an agile work environment.</p>
+                <div class="job">
+                    <h1 class="job-title">Ericsson - Software Developer Coop</h1>
+                    <h2 class="job-date">May 2023 - August 2023</h2>
+                    <p class="job-desc">As a software developer coop, I was responsible for collaborating with our development team to deliver high-quality software solutions, that would increase the efficiency of team operations, and also test software solutions made to ensure they were bug-free and client-ready when released. During this coop, I worked on making tools to increase efficiency in reporting on testing results. In addition, I created a testing framework to test an application that collected the data on the testing devices used by the team. Furthermore, I served as scrum master during multiple scrums hosting scrum meetings and gaining experience in an agile work environment.</p>
                 </div>
-                <div>
-                    <h1>Ericsson - Software Developer Coop</h1>
-                    <h2>January 2023 - April 2023</h2>
-                    <p>As a software developer coop, I was responsible for collaborating with our development team to deliver high-quality software solutions, that would streamline team operations. To that end, I created an application to optimize a process that was done frequently by my team members, which was creating Grafana boards and annotations to the boards. In addition, I made databases to replace Excel sheets, which were previously used as the primary method of storing testing data.</p>
+                <div class="job">
+                    <h1 class="job-title">Ericsson - Software Developer Coop</h1>
+                    <h2 class="job-date">January 2023 - April 2023</h2>
+                    <p class="job-desc">As a software developer coop, I was responsible for collaborating with our development team to deliver high-quality software solutions, that would streamline team operations. To that end, I created an application to optimize a process that was done frequently by my team members, which was creating Grafana boards and annotations to the boards. In addition, I made databases to replace Excel sheets, which were previously used as the primary method of storing testing data.</p>
                 </div>
-                <div>
-                    <h1>University of Waterloo - Undergraduate Research Assistant</h1>
-                    <h2>September 2022 - December 2022</h2>
-                    <p>As an Undergraduate Research Assistant, I was tasked with assisting a professor with solving a research problem. The research problem of focus was the improvement of online STEM education, with a primary focus on the University of Waterloo. My task during the research project was to create a model to predict the likelihood that a student would drop a course from data from the first month of the term. I was able to create a predictive model that made predictions with 67% accuracy. In addition, I presented my results to professors and the lead team at digitalEd - the company that provides the University of Waterloo with online testing and note-sharing software.</p>
+                <div class="job">
+                    <h1 class="job-title">University of Waterloo - Undergraduate Research Assistant</h1>
+                    <h2 class="job-date">September 2022 - December 2022</h2>
+                    <p class="job-desc">As an Undergraduate Research Assistant, I was tasked with assisting a professor with solving a research problem. The research problem of focus was the improvement of online STEM education, with a primary focus on the University of Waterloo. My task during the research project was to create a model to predict the likelihood that a student would drop a course from data from the first month of the term. I was able to create a predictive model that made predictions with 67% accuracy. In addition, I presented my results to professors and the lead team at digitalEd - the company that provides the University of Waterloo with online testing and note-sharing software.</p>
                 </div>
             </div>
         </div>
-        <div class="projects" id="proj"></div>
+        <div class="projects" id="proj">
+            <div class="project-holder">
+                <div class="project">
+                    <div class="project-desc">
+                        <h1>Github Devfinder</h1>
+                        <p>Github Devfinder is a project made with a regular html, css and javascript frontend coupled with a node.js and express js backend. This is a simple project where you can find basic information about a github user by typing their username. You are able to see information on the number of public repositories they have, the number of followers they have, they number of people they are following as well as other public information on their github account.</p>
+                        <button class="view-repo-button">View Repo</button>
+                        <button class="live-demo-button">Live Demo</button>
+                    </div>
+                    <div class="project-image">
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="contact" id="con"></div>
         <div class="footer"></div>
+        <script>
+            function singleArrowHover(element) {
+                element.setAttribute('src', 'arrow-up-hover.png');
+            }
+
+            function singleArrowUnhover(element) {
+                element.setAttribute('src', 'arrow-up.png');
+            }
+        </script>
     </body>
 </html>

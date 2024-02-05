@@ -85,3 +85,55 @@ body{
 .header-links > a:hover{
     text-decoration: underline;
 }
+
+.job-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.job{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.job-title{
+    font-size: 1.5em;
+    margin-block: 0.2em;
+}
+
+.job-date{
+    font-size: 1em;
+    margin: 0.1em;
+}
+
+.job-desc{
+    font-size: 1em;
+    margin: 0;
+}
+
+.job:hover{
+    background: radial-gradient(#0A2647 10%, #141c2f 60%);
+}
+
+.experience-banner{
+    margin: 2em;
+}
+
+.experience-top{
+    display: flex;
+    margin-inline-start: 2em;
+    gap: 2em;
+}
+
+.experience-top > img{
+    object-fit: contain;
+}
+
+.experience-top > h1:hover{
+    color: #0079fe;
+}
