@@ -4,9 +4,11 @@ body{
     background-color: #141c2f;
     font-family: 'Space Mono', monospace;
     color: white;
+    width: 100%;
+    margin: 0;
 }
 
-.header, .header-name, .header-links{
+.header, .header-name, .header-links, .footer{
     display: flex;
     align-items: center;
 }
@@ -49,7 +51,7 @@ body{
 }
 
 
-.download-resume{
+.download-resume, .view-repo-button, .live-demo-button, .submit-contact{
     height: 3rem;
     border: none;
     border-radius: 0.5em;
@@ -72,7 +74,7 @@ body{
 .about-code{
     background-color: #0A2647;
     width: 30em;
-    height: 25em;
+    height: 22em;
     border-radius: 0.5em;
     transform: rotate(-0.01turn);
 }
@@ -84,6 +86,7 @@ body{
 
 .header-links > a:hover{
     text-decoration: underline;
+    color: #0079fe;
 }
 
 .job-holder{
@@ -134,6 +137,131 @@ body{
     object-fit: contain;
 }
 
-.experience-top > h1:hover{
+.experience-top > h1:hover, .project-top> h1:hover, .contact-info > h1:hover{
     color: #0079fe;
+}
+
+.project-holder{
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.project-desc{
+    margin-block-end: 0;
+    background-color: #0A2647;
+    border-radius: 1em;
+    width: 50em;
+    padding-block: 1.5em;
+    padding-inline-start: 1.5em;
+    padding-inline-end: 5em;
+}
+
+.project-desc > h1{
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.project > img{
+    margin-block-start: 0;
+    width: 20%;
+    height: 20%;
+    transform: translate(-4em, -1em) rotate(-0.01turn);
+    border-radius: 0.7em;
+}
+
+.contact{
+    display: flex;
+    background-color: #0A2647;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 1em;
+}
+
+.contact-text, .contact-message {
+    background: none;
+    border: none;
+    width: 30em;
+    height: 3em;
+    font-size: 1em;
+    font-family: 'Space Mono', monospace;
+    border-bottom: 1px solid #0079fe;
+    margin-bottom: 0.5em;
+    color: white;
+} 
+
+.contact-form > form:first-child{
+    margin-top: 0.5em;
+}
+
+.contact-message{
+    height: 7em !important;
+}
+
+.footer{
+    border-top: 0.1em solid #0079fe;
+    padding: 1em;
+    background-color: #0A2647;
+    justify-content: space-between;
+}
+
+.footer-name{
+    padding-inline-start: 2em;
+}
+
+.footer-social{
+    padding-inline-end: 2em;
+}
+
+.about-code > pre{
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85em;
+    margin-inline-start: 1em;
+}
+
+.dot {
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.code-colors{
+    margin-top: 1em;
+    margin-inline-start: 1em;
+}
+
+.dot-1{
+    background-color: #84e296;
+}
+
+.dot-2{
+    background-color: #f2c94c;
+}
+
+.dot-3{
+    background-color: #ff8098;
+}
+
+.run-code{
+    float: right;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.4em;
+    outline: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8em;
+    background-color: #0079fe;
+    color: white;
+    margin-bottom: 0.7em;
+    cursor: pointer;
+    margin-inline-end: 1em;
 }

@@ -2,7 +2,30 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "n3G9XSzLprRmzolya",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contacter-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('gmail_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
         <link rel="stylesheet" href="main.css">
         <link rel="icon" type="image/x-icon" href="/images/upper-case.png">
         <title>Andrew Arochukwu</title>
@@ -34,17 +57,30 @@
                 </div>
             </div>
             <div class="about-code">
-                
+                <div class="code-colors">
+                    <span class="dot dot-1"></span>
+                    <span class="dot dot-2"></span>
+                    <span class="dot dot-3"></span>
+                </div>
+                <pre>1. const me = {
+2.       firstName:"Andrew",
+3.       lastName:"Arochukwu",
+4.       age: new Date().getFullYear()-2003,
+5.       interests:["Web Dev", "Mobile Dev",
+6.                  "Machine Learning"],
+7.       school: "University of Waterloo"
+8.   };
+9. alert(`Hello my name is ${me.firstName} 
+10.       ${me.lastName}, welcome to my portfolio!`)
+                        </pre>
+                <button class="run-code" onclick="coderun()">Run Code!</button>
             </div>
         </div>
         <div class="experience" id="exp">
-            <div class="experience-top">
-                <h1>experience</h1>
-                <a href="#head">
-                    <img src="arrow-up.png" onmouseover="singleArrowHover(this);" onmouseout="singleArrowUnhover(this);">
-                </a>
-            </div>
             <div class="job-holder">
+                <div class="experience-top">
+                    <h1>experience</h1>
+                </div>
                 <div class="job">
                     <h1 class="job-title">Ciena - Embedded Software Developer Coop</h1>
                     <h2 class="job-date">January 2024 - April 2024</h2>
@@ -67,31 +103,83 @@
                 </div>
             </div>
         </div>
-        <div class="projects" id="proj">
-            <div class="project-holder">
-                <div class="project">
-                    <div class="project-desc">
-                        <h1>Github Devfinder</h1>
-                        <p>Github Devfinder is a project made with a regular html, css and javascript frontend coupled with a node.js and express js backend. This is a simple project where you can find basic information about a github user by typing their username. You are able to see information on the number of public repositories they have, the number of followers they have, they number of people they are following as well as other public information on their github account.</p>
-                        <button class="view-repo-button">View Repo</button>
-                        <button class="live-demo-button">Live Demo</button>
-                    </div>
-                    <div class="project-image">
-
-                    </div>
+        <div class="project-holder" id="proj">
+            <div class="project-top">
+                <h1>projects</h1>
+            </div>
+            <div class="project">
+                <div class="project-desc">
+                    <h1>Github Devfinder</h1>
+                    <p>Github Devfinder is a project made with a regular html, css and javascript frontend coupled with a node.js and express js backend. This is a simple project where you can find basic information about a github user by typing their username. You are able to see information on the number of public repositories they have, the number of followers they have, they number of people they are following as well as other public information on their github account.</p>
+                    <a href="https://github.com/aarochuk/github-devfinder" target="_blank"><button class="view-repo-button">View Repo</button></a>
+                    <a href="https://github-devfinder.onrender.com/" target="_blank"><button class="live-demo-button">Live Demo</button></a>
                 </div>
+                <img src="ghdev.png">
+            </div>
+
+            <div class="project">
+                <div class="project-desc">
+                    <h1>Hippo Stock</h1>
+                    <p>Hippo Stock is a fullstack web application built with jinja, html and css for the frontend and flask for the backend. With hippo stock users are able to make an account and trade stocks with fake money. In addition, they are able to follow stocks which would show them news on the stock. Finally users are able to follow other users and view the stocks they have and the trades they have made.</p>
+                    <a href="https://github.com/aarochuk/hippo-stock" target="_blank"><button class="view-repo-button">View Repo</button></a>
+                    <a href="https://hippo-stock.onrender.com/" target="_blank"><button class="live-demo-button">Live Demo</button></a>
+                </div>
+                <img src="hippos.png">
+            </div>
+
+            <div class="project">
+                <div class="project-desc">
+                    <h1>Password Generator</h1>
+                    <p>The password generator is a simple web application built with a html and css frontend and a node.js and express js backend. This web application simply creates a password for the user given the specifications that were indicated by the user. In addition, a rating out of five is shown for the password that was generated.</p>
+                    <a href="https://github.com/aarochuk/password-gen" target="_blank"><button class="view-repo-button">View Repo</button></a>
+                    <a href="https://passwordgenerator-nhie.onrender.com/" target="_blank"><button class="live-demo-button">Live Demo</button></a>
+                </div>
+                <img src="passgen.png">
+            </div>
+
+            <div class="project">
+                <div class="project-desc">
+                    <h1>Sudoku API</h1>
+                    <p>The sudoku api is a simple api that can create, solve and validate sudoku boards. It can create boards of 3 difficulty levels easy, medium and hard and can solve any valid sudoku board it is given. It was built with python and flask. The documentation website was built with html, css and bootstrap while the backend was built with flask. </p>
+                    </p>
+                    <a href="https://github.com/aarochuk/sudoku-api" target="_blank"><button class="view-repo-button">View Repo</button></a>
+                    <a href="https://sudoku-api-lnj7.onrender.com/" target="_blank"><button class="live-demo-button">Live Demo</button></a>
+                </div>
+                <img src="sudoku.png">
+            </div>
+        <!--view more projects should be implemented and but here or after the projects div-->
+        </div>
+        <div class="contact" id="con">
+            <div class="contact-info">
+                <h1>Contact</h1>
+                <p>You can reach out to me by filling out this form.<br> I would respond back as soon as possible.</p>
+            </div>
+            <div class="contact-form">
+                <form id="contacter-form">
+                    <input type="hidden" name="contact_number">
+                    <input class="contact-text" type="text" placeholder="Name" name="user_name"><br>
+                    <input class="contact-text" type="text" placeholder="Email" name="user_email"><br>
+                    <textarea class="contact-message" placeholder="Message" name="message"></textarea><br>
+                    <button class="submit-contact" type="submit">Submit</button>
+                </form>
             </div>
         </div>
-        <div class="contact" id="con"></div>
-        <div class="footer"></div>
+        <div class="footer">
+            <div class="footer-name">
+                <p>andrew a.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/acarochu/" target="_blank"><img src="linkedin.png"></a>
+                <a href="mailto:acarochu@uwaterloo.ca"><img src="email.png"></a>
+                <a href="https://github.com/aarochuk" target="_blank"><img src="github.png"></a>
+            </div>
+        </div>
         <script>
-            function singleArrowHover(element) {
-                element.setAttribute('src', 'arrow-up-hover.png');
+            function coderun(){
+                alert(`Hello my name is Andrew Arochukwu, welcome to my portfolio!`)
             }
 
-            function singleArrowUnhover(element) {
-                element.setAttribute('src', 'arrow-up.png');
-            }
+            
         </script>
     </body>
 </html>
